@@ -1,0 +1,858 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #ffffffB2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181E22;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.navbar .logo {
+    font-weight: 900;
+    padding-left: 40px;
+    font-size: 1.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 70px;
+    padding-right: 250px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.navbar .nav-links a:hover {
+    color: rgb(187, 18, 74);
+}
+.navbar .nav-links .dropdown {
+    position:relative;
+}
+
+.navbar .nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: AUTO;
+    left: 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+   
+}
+
+.navbar .nav-links .dropdown:hover .dropdown-content 
+{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.00001);
+}
+.navbar .nav-links .dropdown:hover .dropdown-content  img{
+    cursor: pointer;
+    padding-left: -35px;
+}
+
+.navbar .nav-links .dropdown-content .dropdown-item {
+    display: inline-block;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    color: black;
+    background-color: #ffffffB2;
+}
+
+.navbar .nav-links .dropdown-content .dropdown-item img {
+    width: 175px;
+    height: 140px;
+    border-radius: 5px;
+}
+.anchor{
+    color:white ;
+    text-decoration:none;
+}
+.navbar .dropdown-content .anchor{
+    display: block;
+}
+
+
+
+.navbar .nav-links2 {
+    display: flex;
+    gap: 70px;
+    padding-right: 100px;
+}
+
+.navbar .nav-links2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.navbar .nav-links2 a:hover {
+    text-decoration: underline;
+    color: rgb(187, 18, 74);
+    
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 70px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 20s infinite;
+}
+
+#image-container {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+
+.mpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    padding-top: 50px;
+}
+
+.no img {
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin-top: 70px;
+}
+
+#content-box {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: -30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: -10px;
+  
+    
+}
+.textbutton {
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, #fff 0%, #e9f0f4 100%);
+    border: 1.18125px solid #fff;
+    box-shadow: 0px 78.75px 63px rgba(63, 93, 138, .37), 0px 32.8999px 26.3199px rgba(63, 93, 138, .0503), 0px 17.5898px 14.0719px rgba(63, 93, 138, .0417275), 20px 0px 37.89px rgba(22, 170, 81, .18), -12px 0px 37.89px rgba(95, 178, 255, .3), 0px 5.23696px 4.18956px rgba(63, 93, 138, .0283), 0px 2.17921px 1.74337px rgba(63, 93, 138, .0197);
+    border-radius: 50%;
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+  
+
+  }
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    gap: 40;
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 60px;
+    transition: background-color 0.3s;
+}
+.buttons button:nth-child(2) 
+{
+    background-color: white;
+    color: #000;
+    border: 0.8px dotted #00000060;
+    height: 60px;
+}
+
+
+.submit {
+   border: 1px solid black;
+   width: 500px;
+   height: auto;
+   background: url('https://w0.peakpx.com/wallpaper/167/364/HD-wallpaper-samsung-black-black-samsung-screen.jpg');
+   background-size: cover;
+   background-position: center;
+   color: white;
+   border-radius: 20px;
+   overflow: hidden;
+   line-height: 20px;
+   box-shadow:0 0 15 px rgba(111,1,155,05);
+   animation: rotate-shadow-smooth 2s infinite linear;
+   
+}
+
+@keyframes rotate-shadow-smooth {
+    0% {
+        box-shadow: 10px 10px 15px rgba(13, 115, 193, 0.5),
+                    -10px -10px 0 rgba(204, 234, 7, 0.5);
+    }
+    25% {
+        box-shadow: -10px 10px 15px rgba(152, 9, 81, 0.5),
+                    10px -10px 0 rgba(10, 172, 53, 0.5);
+    }
+    50% {
+        box-shadow: -10px -10px 15px rgba(102, 211, 7, 0.5),
+                    10px 10px 0 rgba(22, 181, 168, 0.5);
+    }
+    75% {
+        box-shadow: 10px -10px 15px rgba(215, 9, 9, 0.666),
+                    -10px 10px 0 rgba(13, 174, 80, 0.5);
+    }
+    100% {
+        box-shadow: 10px 10px 15px rgba(227, 149, 3, 0.5),
+                    -10px -10px 0 rgba(86, 15, 185, 0.5);
+    }
+}
+
+.submit form {
+    display: block;
+    box-sizing: border-box;
+    padding: 60px;
+    backdrop-filter: brightness(40%);
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+.submit input {
+    all: unset;
+    color: #fff;
+    border: 1px solid #999797;
+    border-radius: 20px;
+    height: 28px;
+    width: 350px;
+    line-height: 28px;
+    padding: 10px 20px;
+    margin-bottom: 22px;
+}
+
+.submit input:focus {
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
+    background: linear-gradient(#121125, #121125) padding-box, linear-gradient(45deg, blue, red) border-box;
+}
+
+
+
+.submit button{
+    background-color: rgb(23, 172, 15);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin: 0px 0px;
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.3);
+    color:white;
+    font-weight: 750;
+    width: 380px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 7px;
+    
+}
+.submit button:hover{
+   cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+    
+}
+
+
+.submit p{
+    font-size: 0.45rem;
+}
+.submit h1{
+    font-weight: 600;
+    font-size: 2rem;
+    text-shadow: 0px opx 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+ 
+/* 
+@keyframes changeBackground {
+    0% {
+        background-image: url('https://cdn.olaelectric.com/sites/evdp/pages/bike/motorcycle_page_banner_web_image.webp');
+    }
+    25% {
+        background-image: url('https://cdn.olaelectric.com/sites/evdp/pages/gig/home_banner_gig_web_image_v2.webp');
+    }
+    50% {
+        background-image: url('https://cdn.olaelectric.com/sites/evdp/pages/home/homepage_no1ev_banner_web_image.webp');
+    }
+    75% {
+        background-image: url('https://cdn.olaelectric.com/sites/evdp/pages/sona/olasaona_banner_web_image.webp');
+    }
+    100% {
+        background-image: url('https://cdn.olaelectric.com/sites/evdp/pages/bike/motorcycle_page_banner_web_image.webp');
+    }
+} */
+
+
+
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@keyframes blinkBackground {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.para{
+    height: 67px;
+    display: flex;
+    align-items: end;
+    font-size: 3rem;
+    background-color: #ffffffB2;
+    margin-left: 40px;
+    margin-top: 55px;
+    font-weight: 800;
+    width: 100%;
+    margin-bottom: -100px;
+    height: auto;
+}
+
+.emi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: 947px;
+    padding: 20px;
+    background-color:rgba(200, 184, 233, 0.116);
+}
+
+.emi div {
+    flex: 1;
+    text-align: center;
+}
+
+.emi img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.emi .image1{
+    max-width: 400px;
+    height: 720px;
+    display: flexbox;
+    color: #333;
+    align-items: start;
+    align-content: start;
+    background-color:rgba(200, 184, 233, 0.116) ;
+}
+.emi .image1 button{
+    width: 342px;
+    height: 42px;
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.emi .image1 .i-content{
+    padding: 10px;
+}
+ .i-content img{
+    padding-left: 70px;
+}
+.i-content .youstyle{
+    width: 342px;
+    height: 45px; 
+    background-color: #ffffffB2;
+    margin-left: 18px;
+    align-self: center;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+   font-size: 18px;
+
+}
+.image1 .images:hover{
+    transform: scale(1.08);
+}
+.emi2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #ffffffB2;
+    margin-top: 0;
+}
+
+.emi2 .image2 {
+    flex: 1;
+    max-width: 402px;
+    text-align: center;
+    background-color: #ffffffB2;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.emi2 .img2:hover {
+    transform: scale(1.03);
+}
+
+.emi2 .image2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.emi2 .content2 {
+    padding: 5px;
+}
+
+.emi2 .content2 h4 {
+    font-size: 26px;
+    color: #18334d;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.emi2 .content2 p {
+    font-size: 14px;    
+    color: #687986;
+    margin-bottom: 9px;
+}
+
+.emi2 .content2 button {
+    
+    color: #0aaf54;
+    background-color: #ffffffB2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 360px;
+    height: 50px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: start;
+    transition: background-color 0.6s ease;
+}
+
+.emi2 .content2 button:hover {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.para2
+{
+    width: 100%;
+    min-height: 200px;
+    margin-left: 115px;
+    align-content: center;
+    
+}
+.para2 h2{
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+.para2 p{
+margin-top: -20px;
+}
+.more{
+    margin-top: -120PX;
+}
+.more button{
+  color: rgba(4, 169, 29, 0.937);
+  background-color: #ffffffB2;   
+  border: none;
+  margin-left: 140px;
+  font-size: 20px;
+  font-size: 500;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(200, 184, 233, 0.116)
+}
+
+.videos h2 {
+    margin: 4 0px 0;
+    font-size: 3rem;
+}
+
+.videos p {
+    margin: 10px 0;
+}
+
+.videos video {
+    max-height: 754px;
+    max-width: 1264px;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.roaddstar {
+    margin-top: 50px;
+    background-color:rgba(139, 137, 142, 0.173);
+}
+
+.buttonss {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-left: 55px;
+    
+}
+
+.buttonss label {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonss input {
+    display: none;
+}
+
+.buttonss input:checked + label {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.imagess img {
+    display: none;
+    width: 80%;
+    max-width: auto;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 170px;
+    border-radius: 10px;
+    
+}
+.roadc{
+    margin-left: 100px;
+    margin-top: 50px;
+
+}
+.roadc h1{
+    font-size: 3rem;
+    margin-top: -15px;
+    
+}
+.roadc p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -25px;
+    margin-left: 10px;
+}
+.roadc2, .roadbut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+.readc2 h2
+{
+    font-size: 2rem;
+}
+.roadc2 p{
+    margin-top: -10px;
+    font-weight: 700;
+    color: #181E2280;
+}
+
+.roadbut {
+    flex-direction: row;
+    gap: 20px;
+    background-color:rgba(255, 255, 255, 0.832);
+}
+
+.roadbut button {
+    padding: 10px;
+    background-color: #000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    height: 55px;
+    width: 190px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.roadbut button:nth-child(2) {
+    background-color: white;
+    color: #000;
+    border: 0.8px dotted #00000060;
+    
+}
+footer{
+    display: inline;
+    background-color: #181E22;
+}
+.footer{
+    background-color: #181E22;
+    width: 100%;
+    max-height: 690px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    justify-content: space-evenly;
+}
+.footer .logo{
+    padding-top: 20px;
+}
+.footer .smedia i
+{
+    padding: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.footer  p{
+    font-size: 16px;
+    color: #D6E1EAB3;
+    line-height: 25px;
+    cursor: pointer;
+}
+.footer h3{
+   color:  #d6e1ea;
+   cursor: pointer;
+}
+ .foot {
+    background-color: #181E22;
+    color: #D6E1EAB3;
+    margin-top: -20px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 13px;
+    font-weight: 600;
+}
+.logo img{
+    cursor: pointer;
+}
+.slide 
+{
+    width: 100%;
+    max-height: auto;
+    display: grid;
+    justify-content: center;
+}
+.slide img{
+    max-width: 1004px;
+    max-height: 165px;
+    margin: 15px;
+}
+.slide2{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline;
+    justify-content: space-around;
+}
+.slide2 img{
+    width:1210px;
+    height: 787.6px;
+    align-content: center;
+    margin:40px;
+    margin-left: 160px;
+    cursor: pointer;
+  
+}
+.slide2 h1{
+    margin-left: 160px;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+.slide2 p{
+    margin-left: 160px;
+    font-size: 18px;
+    margin-top: -30px;
+    font-weight: 400;
+}
+
+.saftey{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding-left: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+   
+}
+.saftey img{
+   max-width: 1200px; 
+    height: auto;
+}
+.saftey h1{
+    color: white;
+    background-color: black;
+    font-size: 2.6rem;
+}
+.saftey p{
+    color:white;
+    background-color: black;
+    padding-bottom: 20px;
+    padding-top: -20px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links, .nav-links2 {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar .logo {
+        padding-left: 20px;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .mpage {
+        padding-top: 20px;
+    }
+    .no img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .submit {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .submit form {
+        width: 100%;
+        padding: 20px;
+    }
+    .emi, .emi2 {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    .emi .image1, .emi2 .image2 {
+        max-width: 100%;
+    }
+    .roadstar .imagess img {
+        width: 100%;
+        margin-left: 0;
+    }
+    .buttonss {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer .logo {
+        margin-bottom: 20px;
+    }
+    .footer .smedia {
+        margin-top: 20px;
+    }
+    .videos video, .slide img, .slide2 img, .saftey img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
